@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <title>Focus Fire</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif; 
+      text-align: center; 
+      padding: 20px; 
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+      color: #fff; 
+    }
+
+    .container {
+      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      padding: 20px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    #timer {
+      font-size: 48px; 
+      margin: 20px; 
+      text-shadow: 0 0 8px rgba(255,255,255,0.5);
+    }
+
+    button {
+      padding: 10px 20px; 
+      margin: 5px; 
+      font-size: 16px;
+      border: none;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.2);
+      color: #fff;
+      box-shadow: 0 0 10px rgba(255,255,255,0.2);
+      transition: all 0.3s ease;
+      backdrop-filter: blur(4px);
+    }
+
+    button:hover {
+      background: rgba(255,255,255,0.3);
+      box-shadow: 0 0 20px rgba(255,255,255,0.5);
+      cursor: pointer;
+    }
+
+    .options button {
+      background: rgba(255,255,255,0.1);
+      font-size: 14px;
+      margin-top: 10px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Focus Fire</h1>
+    <div id="timer">25:00</div>
+
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+    <button id="reset">Reset</button>
+
+    <div class="options">
+      <p>Escolher Timer:</p>
+      <button class="set-timer" data-time="1500">Pomodoro</button>
+      <button class="set-timer" data-time="900">Estudo Curto</button>
+      <button class="set-timer" data-time="3000">Estudo Longo</button>
+      <button class="set-timer" data-time="300">Descanso</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    <script src="popup.js"></script>
+  </div>
+</body>
+</html>
